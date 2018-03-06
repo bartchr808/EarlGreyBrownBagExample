@@ -33,8 +33,8 @@ class ViewController: UIViewController {
 
     struct Colors {
         static var bool = false
-        static let color1 = UIColor(red: 0.7, green: 0.8, blue: 0.5, alpha: 0.9)
-        static let color2 = UIColor(red: 0.8, green: 0.5, blue: 0.4, alpha: 0.9)
+        static let color1 = UIColor(red: 255/255, green: 250/255, blue: 205/255, alpha: 1)
+        static let color2 = UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1)
     }
 
     override func viewDidLoad() {
@@ -47,8 +47,9 @@ class ViewController: UIViewController {
     }
 
     private func setupIdentifiers() {
+        view.accessibilityIdentifier = "View"
         tableView.accessibilityIdentifier = "Table View"
-        addCell.accessibilityIdentifier = "Add Cell"
+        addCell.accessibilityIdentifier = "Add Cell Button"
         label.accessibilityIdentifier = "Label"
         cantClickButton.accessibilityIdentifier = "Can't Click Button"
         progressView.accessibilityIdentifier = "Progress View"

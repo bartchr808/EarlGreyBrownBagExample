@@ -10,27 +10,53 @@ import XCTest
 @testable import EarlGreyBrownBagExample
 
 class EarlGreyBrownBagExampleTests: XCTestCase {
+
+    private func displayVC() {
+        let vc = ViewController()
+        let navController = UINavigationController(rootViewController: vc)
+        navController.isNavigationBarHidden = true
+
+        // Make it the root view controller
+        UIApplication.shared.keyWindow!.rootViewController = navController
+
+        // Call the VC life cycle methods
+        let _ = navController.view
+        let _ = vc.view
+    }
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        displayVC()
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    /// Tests whether the label at the top says the right thing
+    func testLabel() {
+
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    /// Tests whether the disabled button is disabled
+    func testDisabledButton() {
+
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    /// Tests whether the slider will affect the progress bar
+    func testSlider() {
+
     }
-    
+
+    /// Tests whether the switch changes the color of the background
+    func testSwitch() {
+
+    }
+
+    /// Tests whether I can change the date and the corresponding birthday label is changed
+    func testDatePicker() {
+
+    }
+
+    /// Tests whether cells were added to the table view
+    func testCellButton() {
+
+    }
 }
