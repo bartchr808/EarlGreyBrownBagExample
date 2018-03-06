@@ -38,6 +38,9 @@
                                 <rect key="frame" x="60" y="49" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Cell"/>
+                                <connections>
+                                    <action selector="addCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NMV-PK-4cj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7D-P0-rj2">
                                 <rect key="frame" x="184" y="49" width="114" height="30"/>
@@ -54,28 +57,45 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-QG-ryA">
                                 <rect key="frame" x="42" y="143" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Glv-IZ-VgK"/>
+                                </connections>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sev-KN-RoM">
                                 <rect key="frame" x="14" y="106" width="347" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bfV-hN-fOf"/>
+                                </connections>
                             </slider>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iQW-jT-VyK">
                                 <rect key="frame" x="105" y="87" width="127" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="MV2-F6-qid">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV2-F6-qid">
                                 <rect key="frame" x="0.0" y="196" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="542058431.73146105">
-                                    <!--2018-03-06 19:47:11 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="-88747968.268538952">
+                                    <!--1998-03-10 19:47:11 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="changeDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="YbI-0E-pok"/>
+                                </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My birthday is today!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y60-kp-gcG">
+                                <rect key="frame" x="16" y="351" width="343" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="addCell" destination="HjJ-WF-fNW" id="mL9-dn-Ov7"/>
+                        <outlet property="birthdayLabel" destination="Y60-kp-gcG" id="wg9-w1-cCz"/>
                         <outlet property="cantClickButton" destination="Q7D-P0-rj2" id="T2x-o8-Ugd"/>
                         <outlet property="datePicker" destination="MV2-F6-qid" id="PPv-CC-a91"/>
                         <outlet property="label" destination="vST-GK-jP1" id="flo-1H-YIO"/>
