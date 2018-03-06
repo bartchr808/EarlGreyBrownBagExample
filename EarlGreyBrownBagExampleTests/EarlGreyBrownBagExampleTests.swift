@@ -35,6 +35,11 @@ class EarlGreyBrownBagExampleTests: XCTestCase {
 
     }
 
+    /// Tests whether we can edit the text in the text view
+    func testTextView() {
+        
+    }
+
     /// Tests whether the disabled button is disabled
     func testDisabledButton() {
 

@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
 
+    @IBOutlet weak var textView: UITextView!
+
     var stuff = [
         "Cell 1",
         "Cell 2",
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
     }
 
     private func setupIdentifiers() {
+        textView.accessibilityIdentifier = "TextView"
         view.accessibilityIdentifier = "View"
         tableView.accessibilityIdentifier = "Table View"
         addCell.accessibilityIdentifier = "Add Cell Button"

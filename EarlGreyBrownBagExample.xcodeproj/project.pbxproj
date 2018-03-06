@@ -21,6 +21,8 @@
 		EC29647F204F25CD0003A75C /* EarlGreyBrownBagExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29647E204F25CD0003A75C /* EarlGreyBrownBagExampleTests.swift */; };
 		EC29648A204F25CD0003A75C /* EarlGreyBrownBagExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC296489204F25CD0003A75C /* EarlGreyBrownBagExampleUITests.swift */; };
 		EC29649A204F57460003A75C /* GoFromActualRootViewToMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC296499204F57460003A75C /* GoFromActualRootViewToMain.swift */; };
+		EC29649C204F5EA10003A75C /* CustomAssertionBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29649B204F5EA10003A75C /* CustomAssertionBlocks.swift */; };
+		EC2964A0204F65F40003A75C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29649F204F65F40003A75C /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		EC296489204F25CD0003A75C /* EarlGreyBrownBagExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyBrownBagExampleUITests.swift; sourceTree = "<group>"; };
 		EC29648B204F25CD0003A75C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC296499204F57460003A75C /* GoFromActualRootViewToMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoFromActualRootViewToMain.swift; sourceTree = "<group>"; };
+		EC29649B204F5EA10003A75C /* CustomAssertionBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAssertionBlocks.swift; sourceTree = "<group>"; };
+		EC29649F204F65F40003A75C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 				EC296470204F25CD0003A75C /* Assets.xcassets */,
 				EC296472204F25CD0003A75C /* LaunchScreen.storyboard */,
 				EC296475204F25CD0003A75C /* Info.plist */,
+				EC29649F204F65F40003A75C /* RootViewController.swift */,
 			);
 			path = EarlGreyBrownBagExample;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				EC296480204F25CD0003A75C /* Info.plist */,
 				A4B1B8E692EEA946F40CA515 /* EarlGrey.swift */,
 				EC296499204F57460003A75C /* GoFromActualRootViewToMain.swift */,
+				EC29649B204F5EA10003A75C /* CustomAssertionBlocks.swift */,
 			);
 			path = EarlGreyBrownBagExampleTests;
 			sourceTree = "<group>";
@@ -486,6 +492,7 @@
 			files = (
 				EC29646C204F25CD0003A75C /* ViewController.swift in Sources */,
 				EC29646A204F25CD0003A75C /* AppDelegate.swift in Sources */,
+				EC2964A0204F65F40003A75C /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +503,7 @@
 				EC29649A204F57460003A75C /* GoFromActualRootViewToMain.swift in Sources */,
 				EC29647F204F25CD0003A75C /* EarlGreyBrownBagExampleTests.swift in Sources */,
 				87C9B22A8DFE00DB70159DE2 /* EarlGrey.swift in Sources */,
+				EC29649C204F5EA10003A75C /* CustomAssertionBlocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
