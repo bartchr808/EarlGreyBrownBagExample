@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct Colors {
+    static var bool = false
+    static let color1 = UIColor(red: 255/255, green: 250/255, blue: 205/255, alpha: 1)
+    static let color2 = UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -33,33 +39,25 @@ class ViewController: UIViewController {
         "Cell 3"
     ]
 
-    struct Colors {
-        static var bool = false
-        static let color1 = UIColor(red: 255/255, green: 250/255, blue: 205/255, alpha: 1)
-        static let color2 = UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1)
-    }
-
     static func getStoryboardInstance() -> ViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         return controller
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.view.backgroundColor = Colors.color1
         setupTableView()
         setupIdentifiers()
     }
 
     private func setupIdentifiers() {
-        view.accessibilityIdentifier = "View"
         tableView.accessibilityIdentifier = "Table View"
         addCell.accessibilityIdentifier = "Add Cell Button"
         label.accessibilityIdentifier = "Label"
+        birthdayLabel.accessibilityIdentifier = "Birthday Label"
         cantClickButton.accessibilityIdentifier = "Can't Click Button"
         progressView.accessibilityIdentifier = "Progress View"
         slider.accessibilityIdentifier = "Slider"
@@ -114,6 +112,7 @@ extension ViewController: UITableViewDataSource {
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuse", for: indexPath as IndexPath)
         cell.textLabel?.text = stuff[indexPath.row]
+        cell.accessibilityIdentifier = stuff[indexPath.row]
         return cell
     }
 }

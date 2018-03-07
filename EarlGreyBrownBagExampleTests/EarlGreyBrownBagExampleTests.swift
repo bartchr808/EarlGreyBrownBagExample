@@ -19,7 +19,6 @@ class EarlGreyBrownBagExampleTests: XCTestCase {
     private func displayVC() {
         vc = ViewController.getStoryboardInstance()
         let navController = UINavigationController(rootViewController: vc)
-        navController.isNavigationBarHidden = true
 
         // Make it the root view controller
         UIApplication.shared.keyWindow!.rootViewController = navController
@@ -72,16 +71,35 @@ class EarlGreyBrownBagExampleTests: XCTestCase {
 
     /// Tests whether the switch changes the color of the background
     func testSwitch() {
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Switch"))
+            .perform(grey_turnSwitchOn(false))
 
+        GREYAssertTrue(vc.view.backgroundColor == Colors.color2, reason: "Verify that the switch changed the background color")
     }
 
     /// Tests whether I can change the date and the corresponding birthday label is changed
     func testDatePicker() {
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Date Picker"))
+            .perform(grey_setDate(Date(timeIntervalSince1970: 1474819948)))
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Birthday Label"))
+            .assert(assertionBlocks.UILabelTextEqual(expectedString: "It's not my birthday :("))
 
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Date Picker"))
+            .perform(grey_setDate(Date(timeIntervalSince1970: 889539236)))
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Birthday Label"))
+            .assert(assertionBlocks.UILabelTextEqual(expectedString: "It's my birthday! :D"))
     }
 
     /// Tests whether cells were added to the table view
     func testCellButton() {
+        for _ in 0..<10 {
+            EarlGrey.select(elementWithMatcher: grey_accessibilityID("Add Cell Button"))
+                .perform(grey_tap())
+        }
 
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Cell 11"))
+            .usingSearch(grey_scrollInDirection(GREYDirection.down, 80),
+                         onElementWith: grey_accessibilityID("Table View"))
+            .assert(grey_interactable())
     }
 }
