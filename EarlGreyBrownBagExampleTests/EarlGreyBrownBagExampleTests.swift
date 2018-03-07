@@ -7,9 +7,13 @@
 //
 
 import XCTest
+import UIKit
+import EarlGrey
 @testable import EarlGreyBrownBagExample
 
 class EarlGreyBrownBagExampleTests: XCTestCase {
+
+    private let assertionBlocks = EarlGreyCustomAssertionBlocks.shared
 
     private func displayVC() {
         let vc = ViewController()
@@ -32,17 +36,23 @@ class EarlGreyBrownBagExampleTests: XCTestCase {
 
     /// Tests whether the label at the top says the right thing
     func testLabel() {
-
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Label"))
+            .assert(grey_sufficientlyVisible()) // make sure I can see the label
+            .assert(assertionBlocks.UILabelTextEqual(expectedString: "Verify that I say the right thing"))
     }
 
     /// Tests whether we can edit the text in the text view
     func testTextView() {
-        
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Text View"))
+            .perform(grey_scrollInDirection(.down, 100))
+            .perform(grey_scrollInDirection(.up, 100))
+
     }
 
     /// Tests whether the disabled button is disabled
     func testDisabledButton() {
-
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Can't Click Button"))
+            .perform(grey_tap())
     }
 
     /// Tests whether the slider will affect the progress bar

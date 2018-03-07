@@ -135,10 +135,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9b2-uo-3B3">
-                                <rect key="frame" x="97" y="142" width="262" height="75"/>
+                                <rect key="frame" x="97" y="142" width="262" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit er elit lamet, consecteta</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -156,7 +156,7 @@
                         <outlet property="progressView" destination="iQW-jT-VyK" id="UEZ-K1-0ZD"/>
                         <outlet property="slider" destination="sev-KN-RoM" id="YFe-ex-cyk"/>
                         <outlet property="tableView" destination="aph-Pm-eyK" id="QeC-DI-OM2"/>
-                        <outlet property="textView" destination="9b2-uo-3B3" id="1Zt-yC-8jI"/>
+                        <outlet property="textView" destination="9b2-uo-3B3" id="i3M-97-wF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

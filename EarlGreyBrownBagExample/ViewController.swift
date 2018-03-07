@@ -41,15 +41,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.view.backgroundColor = Colors.color1
-
-        setupIdentifiers()
         setupTableView()
+        setupIdentifiers()
     }
 
     private func setupIdentifiers() {
-        textView.accessibilityIdentifier = "TextView"
         view.accessibilityIdentifier = "View"
         tableView.accessibilityIdentifier = "Table View"
         addCell.accessibilityIdentifier = "Add Cell Button"
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
         slider.accessibilityIdentifier = "Slider"
         mySwitch.accessibilityIdentifier = "Switch"
         datePicker.accessibilityIdentifier = "Date Picker"
+        textView.accessibilityIdentifier = "Text View"
     }
 
     private func setupTableView() {
