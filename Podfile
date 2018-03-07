@@ -12,7 +12,7 @@ target 'EarlGreyBrownBagExample' do
     use_frameworks!
     inherit! :search_paths
     # Pods for testing
-    pod 'EarlGrey'
+    pod 'EarlGrey', '= 1.12.0'
   end
 
   target 'EarlGreyBrownBagExampleUITests' do

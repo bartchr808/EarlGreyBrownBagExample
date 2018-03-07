@@ -39,6 +39,11 @@ class ViewController: UIViewController {
         static let color2 = UIColor(red: 175/255, green: 238/255, blue: 238/255, alpha: 1)
     }
 
+    static func getStoryboardInstance() -> ViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        return controller
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
