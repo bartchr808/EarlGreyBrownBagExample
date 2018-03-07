@@ -15,7 +15,6 @@ class GoFromActualRootViewToMain: XCTestCase {
 
     /// Tests whether clicking the main button when the app regularly opens up goes to the main view
     func testGoingFromSingleButtonVCToMainVC() {
-        EarlGrey.select(elementWithMatcher: grey_accessibilityID("Main Screen Button"))
-            .perform(grey_tap())
+
     }
 }
